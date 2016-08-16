@@ -43,6 +43,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 
 
+//主界面
 public class MainActivity extends ActionBarActivity
         implements NavigationDrawerFragment.NavigationDrawerCallbacks {
 
