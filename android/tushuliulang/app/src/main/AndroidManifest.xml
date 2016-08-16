@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.zjut.tushuliulang.tushuliulang" >
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false" />
+
+    <application
+        android:name=".MyApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/icontsll"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".splash.activity_Splash"
+            android:label="@string/app_name"
+            android:theme="@style/AppSplash" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activities.search_activity"
+            android:label="@string/title_activity_search_activity" >
+        </activity>
+        <activity
+            android:name=".activities.login_activity"
+            android:label="@string/title_activity_login_activity"
+            android:theme="@style/AppNoActionBar" >
+        </activity>
+        <activity
+            android:name=".activities.add_book_share"
+            android:label="@string/title_activity_add_book_share"
+            android:windowSoftInputMode="stateHidden" >
+        </activity>
+        <activity android:name=".MainActivity" />
+        <activity android:name=".question.question.QuestionsEnterActivity" >
+        </activity>
+        <activity android:name=".question.question.RespondActivity" >
+        </activity>
+        <activity android:name=".question.ask.AskAcitivity" >
+        </activity>
+        <activity
+            android:name=".activities.Book_share_info"
+            android:label="@string/title_activity_book_share_info" >
+        </activity>
+        <activity
+            android:name=".activities.changestuinfo_activity"
+            android:label="个人信息"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden" />
+        <activity
+            android:name=".library.ui.book_info_library"
+            android:label="@string/title_activity_book_info_library" >
+        </activity>
+        <activity
+            android:name=".activities.lendInfo"
+            android:label="@string/title_activity_lend_info" >
+        </activity>
+        <activity
+            android:name=".activities.book_info_search"
+            android:label="@string/title_activity_book_info_search" >
+        </activity>
+    </application>
+
+</manifest>

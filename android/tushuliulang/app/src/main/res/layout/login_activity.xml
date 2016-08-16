@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/background_login">
+    <!-- padding 内边距   layout_margin 外边距
+                    android:layout_alignParentTop 布局的位置是否处于顶部 -->
+    <RelativeLayout
+        android:id="@+id/login_div"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dip"
+        android:layout_marginTop="50dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        android:background="@drawable/background_login_div_bg"
+        >
+        <!-- 账号 -->
+        <TextView
+            android:id="@+id/login_user_input"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="5dp"
+            android:text="账号"
+            android:textSize="16sp"
+            android:textColor="#000"/>
+        <EditText
+            android:layout_marginTop="5dp"
+            android:id="@+id/et_user"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="教务系统账号"
+            android:background="@drawable/editview"
+            android:padding="10dp"
+            android:layout_below="@id/login_user_input"
+            android:singleLine="true"
+            android:inputType="text"/>
+        <!-- 密码 text -->
+        <TextView
+            android:id="@+id/login_password_input"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/et_user"
+            android:layout_marginTop="10dp"
+            android:text="密码"
+            android:textSize="16sp"
+            android:textColor="#000"/>
+        <EditText
+            android:layout_marginTop="5dp"
+            android:id="@+id/et_password"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/editview"
+            android:padding="10dp"
+            android:layout_below="@id/login_password_input"
+            android:password="true"
+            android:singleLine="true"
+            android:hint="教务系统密码"
+            android:inputType="textPassword"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/et_password"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:layout_weight="1"
+                android:id="@+id/rememberinfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="记住账号与密码"
+                android:layout_centerVertical="true"
+                />
+
+            <!-- 登录button -->
+            <Button
+                android:id="@+id/bt_login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="登录"
+                android:background="@drawable/blue_button"
+                />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dip"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="教务系统？"
+            android:textColor="@drawable/textview_explaination"
+            android:onClick="explaination"
+            android:clickable="true"/>
+
+        <TextView
+            android:id="@+id/tv_explaination"
+            android:padding="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/explaination"
+            android:visibility="invisible"/>
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/cat"
+        android:layout_gravity="right"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="30dp"/>
+
+</LinearLayout>

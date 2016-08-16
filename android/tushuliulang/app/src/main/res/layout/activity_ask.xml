@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:ripple="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <com.andexert.library.RippleView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        ripple:rv_type="doubleRipple">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:background="#ffdcdcdc">
+
+        <!-- tab1 -->
+
+        <TextView
+            android:textColor="@drawable/text_selector"
+            android:id="@+id/tv_table_question"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="问题" />
+
+        <!-- tab2 -->
+
+        <TextView
+            android:textColor="@drawable/text_selector"
+            android:id="@+id/tv_table_describe"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="描述" />
+        <!-- tab3 -->
+    </LinearLayout>
+    </com.andexert.library.RippleView>
+
+    <ImageView
+        android:id="@+id/iv_cursor"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dip"
+        android:src="@mipmap/cursor"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/vp_fragment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:flipInterval="30"
+            android:persistentDrawingCache="animation" />
+
+    </LinearLayout>
+
+</LinearLayout>

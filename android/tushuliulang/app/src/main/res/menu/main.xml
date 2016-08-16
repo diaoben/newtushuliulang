@@ -1,0 +1,12 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" tools:context=".MainActivity">
+    <item android:id="@+id/main_search" android:title="@string/action_example"
+        android:icon="@drawable/abc_ic_search_api_mtrl_alpha"
+        app:showAsAction="withText|ifRoom" />
+    <item android:id="@+id/main_add"
+        android:title="add"
+        android:icon="@android:drawable/ic_input_add"
+        app:showAsAction="ifRoom"></item>
+
+</menu>
